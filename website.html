@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/vbs6bhz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<html>
+<style>
+    body{
+        text-align: center;
+        background-color: #D8D9DC;
+    }
+    h1 {
+        font-family: "josefin-sans", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 65pt;
+        color: #393B45;
+    }
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        color: #6E7889;
+        font-weight: 300;
+    }
+    button {
+        background-color: #F3B54A;
+        border: none;
+        padding: 13px 10px;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin: 10px;
+        font-size: 15pt;
+        color: #393B45;
+        cursor: pointer;
+        border: 2px solid #F3B54A;
+    }
+    button:focus{
+        border: 2px solid #F3B54A;
+        background-color: #D8D9DC;
+    }
+</style>
+    <head>
+        <title>
+            Cockathon
+        </title>
+    </head>
+      
+    <body>
+        <h1>
+            cockathon
+        </h1>
+
+        <h2>
+            select the type of drink you want
+        </h2>
+  
+        <p id = "C_UP" >
+        </p>
+          
+        <button id="1" onClick="C_click(this.id)">
+            sweet
+        </button>
+          
+        <button id="2" onClick="C_click(this.id)">
+            fruity
+        </button>
+          
+        <button id="3" onClick="C_click(this.id)">
+            Button3
+        </button>
+  
+        <p id = "C_DOWN" >
+        </p>
+          
+        <script>
+            var el_up = document.getElementById("C_UP");
+            var el_down = document.getElementById("C_DOWN");
+            const selected = []
+            
+          
+            function C_click(clicked) {
+                
+                selected.push(clicked)
+                el_down.innerHTML = "ID = "+selected;
+
+            }        
+        </script>
+    </body>
+</html>                    
