@@ -1,11 +1,11 @@
 Number,Words
-73,['IBA']
-32,['ContemporaryClassic']
-22,['Classic']
-15,['NewEra']
-7,['Alcoholic']
-5,['Christmas']
-4,"['StrongFlavor', 'Winter']"
-3,"['Fruity', 'Brunch', 'Hangover', 'Halloween', 'Sweet', 'Citrus']"
-2,"['Classy', 'Cold', 'Kids', 'Breakfast', 'USA', ' Colourful', 'Beach', 'Drunk', ' Summer', 'Summer', 'Sour', ' Sharp', 'Asia', 'Dark', 'Adult']"
-1,"[' Spicy', 'Colourful', ' Blue', 'Nutty', 'Dairy', 'DateNight', 'Purple', 'Brazilian', 'DinnerParty', ' Frozen', 'Orange', 'Clear', 'Europe', 'simple', ' classic', ' refreshing', 'Green', 'Lazy', ' Fresh', ' Refreshing', 'Strong', 'Vegetarian', 'Vegan', 'Mild', ' Fruity', 'German', 'Expensive', 'Savory', 'Fresh', ' Nature', ' Shot', ' Bubbly', 'Passion', 'Calorific', 'Spanish']"
+73,['iba']
+32,['contemporaryclassic']
+23,['classic']
+15,['newera']
+7,['alcoholic']
+5,['christmas']
+4,"['fruity', 'strongflavor', 'summer', 'winter']"
+3,"['brunch', 'hangover', 'halloween', 'colourful', 'sweet', 'citrus']"
+2,"['classy', 'cold', 'kids', 'breakfast', 'usa', 'beach', 'drunk', 'refreshing', 'sour', 'sharp', 'fresh', 'asia', 'dark', 'adult']"
+1,"['spicy', 'blue', 'nutty', 'dairy', 'datenight', 'purple', 'brazilian', 'dinnerparty', 'frozen', 'orange', 'clear', 'europe', 'simple', 'green', 'lazy', 'strong', 'vegetarian', 'vegan', 'mild', 'german', 'expensive', 'savory', 'nature', 'shot', 'bubbly', 'passion', 'calorific', 'spanish']"
