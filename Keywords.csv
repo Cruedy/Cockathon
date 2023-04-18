@@ -1,29 +1,11 @@
 Number,Words
-289,IBA
-249,ContemporaryClassic
-106,Classic
-85,NewEra
-79,Alcoholic
-77,Christmas
-73,Winter
-61,StrongFlavor
-45,Citrus
-29,Adult
-28,Dark
-27,Asia
-26, Sharp
-25,Halloween
-24,Sour
-23,Hangover
-22, Summer
-21,Brunch
-19,Drunk
-18,Beach
-17, Colourful
-16,USA
-15,Fruity
-10,Breakfast
-4,Kids
-3,Cold
-2,Classy
-1,Spanish
+73,['iba']
+32,['contemporaryclassic']
+23,['classic']
+15,['newera']
+7,['alcoholic']
+5,['christmas']
+4,"['fruity', 'strongflavor', 'summer', 'winter']"
+3,"['brunch', 'hangover', 'halloween', 'colourful', 'sweet', 'citrus']"
+2,"['classy', 'cold', 'kids', 'breakfast', 'usa', 'beach', 'drunk', 'refreshing', 'sour', 'sharp', 'fresh', 'asia', 'dark', 'adult']"
+1,"['spicy', 'blue', 'nutty', 'dairy', 'datenight', 'purple', 'brazilian', 'dinnerparty', 'frozen', 'orange', 'clear', 'europe', 'simple', 'green', 'lazy', 'strong', 'vegetarian', 'vegan', 'mild', 'german', 'expensive', 'savory', 'nature', 'shot', 'bubbly', 'passion', 'calorific', 'spanish']"
