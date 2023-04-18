@@ -37,3 +37,8 @@ button:focus{
      background-color: #D8D9DC;
      color: #393B45;
 }
+.active{
+     border: 2px solid #F3B54A;
+     background-color: #D8D9DC;
+     color: #393B45;
+}
