@@ -258,13 +258,16 @@
         <script>
             var el_up = document.getElementById("C_UP");
             var el_down = document.getElementById("C_DOWN");
+            
             const selected = []
             
           
             function C_click(clicked) {
-                
+                var element = document.getElementById(clicked);
                 selected.push(clicked)
                 el_down.innerHTML = "ID = "+selected;
+                
+                element.classList.toggle('active');
 
             }        
         </script>
