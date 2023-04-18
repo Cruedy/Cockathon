@@ -27,13 +27,13 @@ button {
     cursor: pointer;
     border: 2px solid #F3B54A;
 }
-button:focus{
-    border: 2px solid #F3B54A;
-    background-color: #D8D9DC;
-}
+
 button:hover{
-    background-color: orange;
+     color: #D8D9DC;
+        
 }
-button:active{
-    background-color: darkorange;
+button:focus{
+     border: 2px solid #F3B54A;
+     background-color: #D8D9DC;
+     color: #393B45;
 }
