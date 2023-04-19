@@ -28,21 +28,8 @@ button {
     border: 2px solid #F3B54A;
 }
 button:hover{
-<<<<<<< HEAD
-     color: #D8D9DC;
-        
+     color: #D8D9DC;    
 }
-/* button:focus{
-     border: 2px solid #F3B54A;
-     background-color: #D8D9DC;
-     color: #393B45;
-} */
-=======
-    color: #D8D9DC;
-    
-}
-
->>>>>>> d8e0992a76defdcd3503bfad685780a1113cbf09
 .active{
     border: 2px solid #F3B54A;
     background-color: #D8D9DC;
