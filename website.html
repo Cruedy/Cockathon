@@ -250,10 +250,11 @@
         </button>
 
         <p id = "C_DOWN" >
+            placeholder
         </p>
 
-        <p id = "D">
-
+        <p id = "D" >
+            placeholder
         </p>
 
         <button id="enter">
@@ -274,6 +275,7 @@
                 el_down.innerHTML = "ID = "+ selected;
                 
                 element.classList.toggle('active');
+                el_down.classList.toggle('selected');
 
             }
             const ids = ["iba", "contemporaryclassic", "classic", "newera", "alcoholic", "christmas", "strongflavor", "winter", "fruity", "brunch", "hangover", "halloween", "sweet", "citrus", "classy", "cold", "kids", "breakfast", "usa", "colourful", "beach", "drunk", "summer", "sour", "sharp", "asia", "dark", "adult", "spicy", "blue", "nutty", "dairy", "datenight", "purple", "brazilian", "dinnerparty", "frozen", "orange", "clear", "europe", "simple", "green", "lazy", "strong", "vegetarian", "vegan", "mild", "german", "expensive", "savory", "nature", "shot", "passion", "calorific", "spanish"];
@@ -283,10 +285,12 @@
                 let index = ids.indexOf(hovered);
                 let disp = descriptions[index];
                 description.innerHTML = disp;
+                description.classList.toggle('selected');
             }
 
             function mouseOff(x) {
-                description.innerHTML = "";
+                
+                description.classList.toggle('selected');
             }
         </script>
     </body>

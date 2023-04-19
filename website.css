@@ -38,6 +38,13 @@ button:hover{
 
 p {
     font-family: 'Raleway', sans-serif;
+    color: #D8D9DC;
+    font-weight: 300;
+    font-size: 15pt;
+}
+
+.selected {
+    font-family: 'Raleway', sans-serif;
     color: #6E7889;
     font-weight: 300;
     font-size: 15pt;
