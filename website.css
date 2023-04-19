@@ -37,3 +37,10 @@ button:hover{
     background-color: #D8D9DC;
     color: #393B45;
 }
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #6E7889;
+    font-weight: 300;
+    font-size: 15pt;
+}
