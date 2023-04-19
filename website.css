@@ -27,8 +27,8 @@ button {
     cursor: pointer;
     border: 2px solid #F3B54A;
 }
-
 button:hover{
+<<<<<<< HEAD
      color: #D8D9DC;
         
 }
@@ -37,8 +37,21 @@ button:hover{
      background-color: #D8D9DC;
      color: #393B45;
 } */
+=======
+    color: #D8D9DC;
+    
+}
+
+>>>>>>> d8e0992a76defdcd3503bfad685780a1113cbf09
 .active{
-     border: 2px solid #F3B54A;
-     background-color: #D8D9DC;
-     color: #393B45;
+    border: 2px solid #F3B54A;
+    background-color: #D8D9DC;
+    color: #393B45;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #6E7889;
+    font-weight: 300;
+    font-size: 15pt;
 }
