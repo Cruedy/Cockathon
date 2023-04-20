@@ -285,7 +285,13 @@
           
             function C_click(clicked) {
                 var element = document.getElementById(clicked);
-                selected.push(clicked);
+                if (selected.includes(clicked)) {
+                    // Remove the button's ID from the array
+                    selected.splice(selected.indexOf(clicked), 1);
+                } else {
+                    // Add the button to the array
+                    selected.push(clicked);
+                }
                 selectedTags.push(element.innerText);
                 el_down.innerHTML = "ID = "+ selected;
                 
