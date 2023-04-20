@@ -28,12 +28,24 @@ button {
     border: 2px solid #F3B54A;
 }
 button:hover{
-    color: #D8D9DC;
-    
+     color: #D8D9DC;    
 }
-
 .active{
     border: 2px solid #F3B54A;
     background-color: #D8D9DC;
     color: #393B45;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #D8D9DC;
+    font-weight: 300;
+    font-size: 15pt;
+}
+
+.selected {
+    font-family: 'Raleway', sans-serif;
+    color: #6E7889;
+    font-weight: 300;
+    font-size: 15pt;
 }

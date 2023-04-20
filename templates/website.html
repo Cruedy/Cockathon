@@ -1,176 +1,327 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <head>
-  <link rel="stylesheet" href="https://use.typekit.net/vbs6bhz.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="../static/website.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vbs6bhz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/website.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <html>
-  <head>
-    <title>Cockathon</title>
-  </head>
+    <head>
+        <title>
+            Cockathon
+        </title>
+    </head>
+      
+    <body>
+        <h1>
+            cockathon
+        </h1>
 
-  <body>
-    <h1>cockathon</h1>
+        <h2>
+            select the type of drink you want
+        </h2>
+  
+        <p id = "C_UP" >
+        </p>
+          
+        <button id="iba" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)"" onmouseout="mouseOff(this)">
+            IBA
+        </button>
+          
+        <button id="contemporaryclassic" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            contemporary classic
+        </button>
+          
+        <button id="classic" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            classic
+        </button>
 
-    <h2>select the type of drink you want</h2>
+        <button id="newera" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            new era
+        </button>
 
-    <p id="C_UP"></p>
+        <button id="alcoholic" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            alcoholic
+        </button>
 
-    <button id="1" onClick="C_click(this.id)">IBA</button>
+        <button id="christmas" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            christmas
+        </button>
 
-    <button id="2" onClick="C_click(this.id)">contemporary classic</button>
+        <button id="strongflavor" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            strong flavor
+        </button>
 
-    <button id="3" onClick="C_click(this.id)">classic</button>
+        <button id="winter" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            winter
+        </button>
 
-    <button id="4" onClick="C_click(this.id)">new era</button>
+        <button id="fruity" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            fruity
+        </button>
 
-    <button id="5" onClick="C_click(this.id)">alcoholic</button>
+        <button id="brunch" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            brunch
+        </button>
 
-    <button id="6" onClick="C_click(this.id)">christmas</button>
+        <button id="hangover" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)"">
+            hangover
+        </button>
+        
+        <button id="halloween" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            halloween
+        </button>
 
-    <button id="7" onClick="C_click(this.id)">strong flavor</button>
+        <button id="sweet" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            sweet
+        </button>
 
-    <button id="8" onClick="C_click(this.id)">winter</button>
+        <button id="citrus" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            citrus
+        </button>
 
-    <button id="9" onClick="C_click(this.id)">fruity</button>
+        <button id="classy" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            classy
+        </button>
 
-    <button id="10" onClick="C_click(this.id)">brunch</button>
+        <button id="cold" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            cold
+        </button>
 
-    <button id="11" onClick="C_click(this.id)">hangover</button>
+        <button id="kids" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            kids
+        </button>
 
-    <button id="12" onClick="C_click(this.id)">halloween</button>
+        <button id="breakfast" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            breakfast
+        </button>
 
-    <button id="13" onClick="C_click(this.id)">sweet</button>
+        <button id="usa" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            USA
+        </button>
 
-    <button id="14" onClick="C_click(this.id)">citrus</button>
+        <button id="colourful" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            colourful
+        </button>
 
-    <button id="15" onClick="C_click(this.id)">classy</button>
+        <button id="beach" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            beach
+        </button>
 
-    <button id="16" onClick="C_click(this.id)">cold</button>
+        <button id="drunk" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            drunk
+        </button>
 
-    <button id="17" onClick="C_click(this.id)">kids</button>
+        <button id="summer" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            summer
+        </button>
 
-    <button id="18" onClick="C_click(this.id)">breakfast</button>
+        <button id="sour" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            sour
+        </button>
 
-    <button id="19" onClick="C_click(this.id)">USA</button>
+        <button id="sharp" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            sharp
+        </button>
 
-    <button id="20" onClick="C_click(this.id)">colourful</button>
+        <button id="asia" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            asia
+        </button>
 
-    <button id="21" onClick="C_click(this.id)">beach</button>
+        <button id="dark" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            dark
+        </button>
 
-    <button id="22" onClick="C_click(this.id)">drunk</button>
+        <button id="adult" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            adult
+        </button>
 
-    <button id="23" onClick="C_click(this.id)">summer</button>
+        <button id="spicy" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            spicy
+        </button>
 
-    <button id="24" onClick="C_click(this.id)">sour</button>
 
-    <button id="25" onClick="C_click(this.id)">sharp</button>
+        <button id="blue" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            blue
+        </button>
 
-    <button id="26" onClick="C_click(this.id)">asia</button>
+        <button id="nutty" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            nutty
+        </button>
 
-    <button id="27" onClick="C_click(this.id)">dark</button>
+        <button id="dairy" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            dairy
+        </button>
 
-    <button id="28" onClick="C_click(this.id)">adult</button>
+        <button id="datenight" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            date night
+        </button>
 
-    <button id="29" onClick="C_click(this.id)">spicy</button>
+        <button id="purple" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            purple
+        </button>
 
-    <button id="30" onClick="C_click(this.id)">colourful</button>
+        <button id="brazilian" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            brazilian
+        </button>
 
-    <button id="31" onClick="C_click(this.id)">blue</button>
+        <button id="dinnerparty" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            dinner party
+        </button>
 
-    <button id="32" onClick="C_click(this.id)">nutty</button>
+        <button id="frozen" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            frozen
+        </button>
 
-    <button id="33" onClick="C_click(this.id)">dairy</button>
+        <button id="orange" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            orange
+        </button>
 
-    <button id="34" onClick="C_click(this.id)">date night</button>
+        <button id="clear" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            clear
+        </button>
 
-    <button id="35" onClick="C_click(this.id)">purple</button>
+        <button id="europe" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            europe
+        </button>
 
-    <button id="36" onClick="C_click(this.id)">brazilian</button>
+        <button id="simple" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            simple
+        </button>
 
-    <button id="37" onClick="C_click(this.id)">dinner party</button>
+        <button id="green" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            green
+        </button>
 
-    <button id="38" onClick="C_click(this.id)">frozen</button>
+        <button id="lazy" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            lazy
+        </button>
 
-    <button id="39" onClick="C_click(this.id)">orange</button>
+        <button id="strong" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            strong
+        </button>
 
-    <button id="40" onClick="C_click(this.id)">clear</button>
+        <button id="vegetarian" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            vegetarian
+        </button>
 
-    <button id="41" onClick="C_click(this.id)">europe</button>
+        <button id="vegan" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            vegan
+        </button>
 
-    <button id="42" onClick="C_click(this.id)">simple</button>
+        <button id="mild" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            mild
+        </button>
 
-    <button id="43" onClick="C_click(this.id)">green</button>
+        <button id="german" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            german
+        </button>
 
-    <button id="44" onClick="C_click(this.id)">lazy</button>
+        <button id="expensive" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            expensive
+        </button>
 
-    <button id="45" onClick="C_click(this.id)">strong</button>
+        <button id="savory" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            savory
+        </button>
 
-    <button id="46" onClick="C_click(this.id)">vegetarian</button>
+        <button id="nature" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            nature
+        </button>
 
-    <button id="47" onClick="C_click(this.id)">vegan</button>
+        <button id="shot" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            shot
+        </button>
 
-    <button id="48" onClick="C_click(this.id)">mild</button>
+        <button id="passion" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            passion
+        </button>
 
-    <button id="49" onClick="C_click(this.id)">german</button>
+        <button id="calorific" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            calorific
+        </button>
 
-    <button id="50" onClick="C_click(this.id)">expensive</button>
+        <button id="spanish" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            spanish
+        </button>
 
-    <button id="51" onClick="C_click(this.id)">savory</button>
+        <button id="refreshing" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            refreshing
+        </button>
 
-    <button id="52" onClick="C_click(this.id)">nature</button>
+        <button id="fresh" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            fresh
+        </button>
 
-    <button id="53" onClick="C_click(this.id)">shot</button>
+        <button id="bubbly" onClick="C_click(this.id)" onmouseover="mouseOver(this.id)" onmouseout="mouseOff(this)">
+            bubbly
+        </button>
 
-    <button id="54" onClick="C_click(this.id)">passion</button>
+        <p id = "C_DOWN" >
+            placeholder
+        </p>
 
-    <button id="55" onClick="C_click(this.id)">calorific</button>
+        <p id = "D" >
+            placeholder
+        </p>
 
-    <button id="56" onClick="C_click(this.id)">spanish</button>
+        <button id="enter" onClick="Submit_Drinks(this.id)">
+            make drink
+        </button>
+          
+        <script>
+            var el_up = document.getElementById("C_UP");
+            var el_down = document.getElementById("C_DOWN");
+            var description = document.getElementById("D");
+            
+            const selected = [];
+            const selectedTags = [];
+            
+            function Submit_Drinks() {
+                const jsonArray = JSON.stringify(selectedTags);
+                $.ajax({
+                    url: "/retrieve_drinks",
+                    type: "POST",
+                    data: jsonArray,
+                    contentType: "application/json",
+                    success: function (response) {
+                        // console.log(response);
+                    },
+                    error: function (error) {
+                        // console.error(error);
+                    },
+                });
+            }
 
-    <p id="C_DOWN"></p>
+            function C_click(clicked) {
+                var element = document.getElementById(clicked);
+                selected.push(clicked);
+                selectedTags.push(element.innerText);
+                el_down.innerHTML = "ID = "+ selected;
+                
+                element.classList.toggle('active');
+                el_down.classList.toggle('selected');
 
-    <script>
-      var el_up = document.getElementById("C_UP");
-      var el_down = document.getElementById("C_DOWN");
+            }
+            const ids = ["iba", "contemporaryclassic", "classic", "newera", "alcoholic", "christmas", "strongflavor", "winter", "fruity", "brunch", "hangover", "halloween", "sweet", "citrus", "classy", "cold", "kids", "breakfast", "usa", "colourful", "beach", "drunk", "summer", "sour", "sharp", "asia", "dark", "adult", "spicy", "blue", "nutty", "dairy", "datenight", "purple", "brazilian", "dinnerparty", "frozen", "orange", "clear", "europe", "simple", "green", "lazy", "strong", "vegetarian", "vegan", "mild", "german", "expensive", "savory", "nature", "shot", "passion", "calorific", "spanish", "refreshing", "fresh", "bubbly"];
+            const descriptions = ["cocktails recognized by the International Bartenders Association", "a symbol of class and prestige", "origin drinks that inspire the modern ones", "calibrated on the evolution of consumption, the fashions of the moment", "contains ethanol", "festive", "hella alcohol", "probably reminds you of the winter", "contains fruit, duh", "meant to be drunk from 10am - 1am", "sugary, hurts head the next day", "scary", "sugary, caters to the tip of your tongue", "high acidity", "elegant and post, not crude", "below 50ºF", "meant for minors", "meant to be drunk before 10am", "only drink within the borders of the US", "with british color", "has sand in it", "only tastes good if you're already drunk", "idk, reminds you of the summer", "caters to the side of your tongue", "taste buds say ouch", "only drink on the asia half of russia and turkey", "can't be seen at night", "meant for majors", "has a lot of paprika", "not red or yellow", "so silly", "makes you shit", "contains aphrodesiacs", "rain", "butt lift", "meant to be drank after 5pm", "like the movie", "you glad I didn't say banana", "can see through", "only drink on the europe half of russia and turkey", "straight shot", "like money", "few steps", "gets you drunk off your ass", "doesn't contain meat", "contains less meat than the vegetarian one", "not spicy", "ich bin ein frau", "ingredients are sold by Gwenyth Paltrow", "not sweet, but desirable still", "good for a hike", "only click if you're under 30", "contains aphrodesiacs", "reaches your daily intake", "Soy embarazada", "wakes you up", "the action done before the refresh", "makes you gassy"];
 
-      const selected = [];
-      const selectedTags = [];
+            function mouseOver(hovered) {
+                let index = ids.indexOf(hovered);
+                let disp = descriptions[index];
+                description.innerHTML = disp;
+                description.classList.toggle('selected');
+            }
 
-      function C_click(clicked) {
-        var element = document.getElementById(clicked);
-        console.log(element.innerText);
-        selectedTags.push(element.innerText);
-        selected.push(clicked);
-        el_down.innerHTML = "ID = " + selected;
-        const jsonArray = JSON.stringify(selectedTags);
-        // console.log("Clicked");
-        $.ajax({
-          url: "/retrieve_drinks",
-          type: "POST",
-          data: jsonArray,
-          contentType: "application/json",
-          success: function (response) {
-            // console.log(response);
-          },
-          error: function (error) {
-            // console.error(error);
-          },
-        });
-        element.classList.toggle("active");
-      }
-    </script>
-  </body>
-</html>
+            function mouseOff(x) {
+                
+                description.classList.toggle('selected');
+            }
+        </script>
+    </body>
+</html>                    
