@@ -1,20 +1,17 @@
 import csv
-import itertools
+import random
 
-# takes in adjectives, like sweet, fruity, and outputs a list of drinks that are already in our ingredients.csv
+# takes in adjectives, like sweet, fruity
+# outputs a list of drinks that are already in our ingredients.csv
 def getDrinks(tags):
-    drinks = []
-    for t in tags:
-        per_tag = []
-        with open("Tags.csv", "r") as file:
-            csvreader = csv.reader(file)
-            for row in csvreader:
-                # print(row)
-                if t in row[1]:
-                    per_tag.append(row[0])
-        drinks.append(per_tag)
-    return drinks
-
+  drinks = []
+  for t in tags:
+    with open("Tags.csv", "r") as file:
+      csvreader = csv.reader(file)
+      for row in csvreader:
+        if t in row[1]:
+          drinks.append(row[0])
+  return drinks
 
 # inputs a list of drinks that are in our ingredients.csv
 # outputs the list of ingredients in those drinks
@@ -23,7 +20,7 @@ def getIngredients(drinks):
     with open("Ingredients.csv", "r") as file:
         csvreader = csv.reader(file)
         for row in csvreader:
-            if row[0] in drinks[0]:
+            if row[0] in drinks:
                 #row[1] is a string
                 no_outside_quotes = row[1][1:-1].split(",")
                 # print(no_outside_quotes)
@@ -34,8 +31,30 @@ def getIngredients(drinks):
                     ingredients.append(ingredient_no_quotes)
     return ingredients
 
-# getIngredients(getDrinks(["fruity"]))
-print(getIngredients(getDrinks(["fruity"])))
+# helper for createName
+def handle_loop(adj, alc, max, name, drinks):
+    for d in drinks:
+        terms = d.split()
+        if len(terms) > max:
+            max = len(terms)
+        alc.append(terms.pop(len(terms)-1))
+        for t in terms:
+            adj.append(t)
+    for i in range(max - 1):
+        num = random.randint(0, len(adj)-1)
+        name = name + adj[num] + " "
+        adj.pop(num)
+    num = random.randint(0, len(alc)-1)
+    name = name + alc[num] + " "
+    return name
 
-# print(getDrinks(["fruity"]))
-# print('Banana Daiquiri' + " " in getDrinks(["fruity"])[0])
+# inputs a list of drink names
+# outputs a super cool name of a drink
+def createName(drinks):
+    adj = []
+    alc = []
+    print(drinks)
+    name = handle_loop(adj, alc, 0, "", drinks)
+    while name in drinks[0]:
+        name = handle_loop(adj, alc, 0, "", drinks)
+    return name
