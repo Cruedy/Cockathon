@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Animation with Video</title>
+    <style>
+        body{
+          background-color: black;
+        }
+        /* CSS styles for the container element */
+        .loader-container {
+            /* Update the properties as needed */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CSS styles for the video element */
+        #loader-video {
+            /* Set video to a smaller width and height */
+            width: 240px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <!-- Video element with muted attribute and autoplay without loop attribute -->
+        <video id="loader-video" src="load.mp4" muted autoplay></video>
+    </div>
+
+    <script>
+        // Get the video element
+        var video = document.getElementById("loader-video");
+
+        // Add an event listener for video ended event
+        video.addEventListener("ended", function() {
+            // Replay the video when it ends
+            video.currentTime = 0;
+            video.play();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
