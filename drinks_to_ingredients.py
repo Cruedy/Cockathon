@@ -6,7 +6,7 @@ import random
 def getDrinks(tags):
   drinks = []
   for t in tags:
-    with open("Tags.csv", "r") as file:
+    with open("helper/Tags.csv", "r") as file:
       csvreader = csv.reader(file)
       for row in csvreader:
         if t in row[1]:
@@ -17,7 +17,7 @@ def getDrinks(tags):
 # outputs the list of ingredients in those drinks
 def getIngredients(drinks):
     ingredients = []
-    with open("Ingredients.csv", "r") as file:
+    with open("helper/Ingredients.csv", "r") as file:
         csvreader = csv.reader(file)
         for row in csvreader:
             if row[0] in drinks:
