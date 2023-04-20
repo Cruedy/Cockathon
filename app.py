@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import csv
 
 app = Flask("Cockathon")
+dataL = [0]
+drinksL = [0]
 
 def getDrinks(tags):
   drinks = []
@@ -19,17 +21,21 @@ def getDrinks(tags):
 
 @app.route('/show_drinks', methods=['GET'])
 def show_drinks():
-  return render_template("drink.html", cache_timeout=0)
+  print("data:", dataL[0])
+  print("drinks:", drinksL[0])
+  return render_template("drink.html", drinks = drinksL[0], cache_timeout=0)
 
 @app.route('/retrieve_drinks', methods=['POST'])
 def retrieve_drinks():
     data = request.get_json()
-    print("Data:", data)
+    dataL[0] = data
+    # print("Data:", data)
     drinks = getDrinks(data)
-    print(drinks)
-    print("test")
-    print()
-    return redirect(url_for('show_drinks'))
+    drinksL[0] = drinks
+    # print(drinks)
+    # print("test")
+    # print()
+    return render_template("drink.html", cache_timeout=0) # redirect(url_for('show_drinks'))
 
 
 @app.route('/')
