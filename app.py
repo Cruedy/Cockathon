@@ -35,7 +35,7 @@ def retrieve_drinks():
     drink = drinks_to_ingredients.getDrinks(data)[0]
     drinksL[0] = drink
     ingredientsList = drinks_to_ingredients.getIngredients(drink)
-    ingredients = " ".join(ingredientsList)
+    ingredients = ", ".join(ingredientsList)
     descriptionsL[0] = ingredients
     # print(drinks)
     # print("test")
