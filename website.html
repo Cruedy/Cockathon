@@ -269,9 +269,9 @@
             placeholder
         </p>
 
-        <button id="enter">
+        <a href="drink.html"><button id="enter" onClick="store(this)">
             make drink
-        </button>
+        </button></a>
           
         <script>
             var el_up = document.getElementById("C_UP");
@@ -303,6 +303,10 @@
             function mouseOff(x) {
                 
                 description.classList.toggle('selected');
+            }
+
+            function store(x) {
+                localStorage.input = selected
             }
         </script>
     </body>

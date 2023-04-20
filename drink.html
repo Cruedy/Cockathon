@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/vbs6bhz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "website.css">
+</head>
+<html>
+    <head>
+        <title>
+            Drink
+        </title>
+    </head>
+<body>
+<h1>
+    your drink name
+</h1>
+<p style="color:#6E7889">
+    description
+</p>
+
+<a href="website.html"><button id="enter">
+    make new drink
+</button></a>
+
+<p style="color:#6E7889" id="result">
+    
+</p>
+<script>
+    document.getElementById("result").innerHTML = localStorage.getItem("input");
+</script>
+</body>
+</html>
