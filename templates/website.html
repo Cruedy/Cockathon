@@ -269,9 +269,9 @@
             placeholder
         </p>
 
-        <a href="drink.html"><button id="enter" onClick="store(this)">
+        <button id="enter" onClick="store(this)">
             make drink
-        </button></a>
+        </button>
           
         <script>
             var el_up = document.getElementById("C_UP");
@@ -309,6 +309,7 @@
 
             function store(x) {
                 localStorage.input = selected
+                
                 const jsonArray = JSON.stringify(selected);
                 $.ajax({
                     url: "/retrieve_drinks",
@@ -316,7 +317,7 @@
                     data: jsonArray,
                     contentType: "application/json",
                     success: function (response) {
-                        // console.log(response);
+                        console.log("sent");
                     },
                     error: function (error) {
                         // console.error(error);
