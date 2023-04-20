@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "website.css">
-</head>
+    <link rel="stylesheet" href="../static/website.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <html>
     <head>
         <title>
@@ -279,11 +279,13 @@
             var description = document.getElementById("D");
             
             const selected = [];
+            const selectedTags = [];
             
           
             function C_click(clicked) {
                 var element = document.getElementById(clicked);
                 selected.push(clicked);
+                selectedTags.push(element.innerText);
                 el_down.innerHTML = "ID = "+ selected;
                 
                 element.classList.toggle('active');
@@ -307,6 +309,19 @@
 
             function store(x) {
                 localStorage.input = selected
+                const jsonArray = JSON.stringify(selected);
+                $.ajax({
+                    url: "/retrieve_drinks",
+                    type: "POST",
+                    data: jsonArray,
+                    contentType: "application/json",
+                    success: function (response) {
+                        // console.log(response);
+                    },
+                    error: function (error) {
+                        // console.error(error);
+                    },
+                });
             }
         </script>
     </body>
