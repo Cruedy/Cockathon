@@ -18,10 +18,14 @@
     </head>
 <body>
 <h1>
-    Your drink name: {{drinks}}
+    Your drink name:
 </h1>
+<h1 >
+    {{drinks}}
+</h1>
+<p class="title-text"> Description:</p>
 <p style="color:#6E7889">
-    Description: {{description}}
+    {{description}}
 </p>
 
 <form action="/" method="get">
@@ -30,11 +34,12 @@
     </button>
 </form>
 
+<p class="title-text"> Drink types:</p>
 <p style="color:#6E7889" id="result">
-    
+    {{data}}
 </p>
 <script>
-    document.getElementById("result").innerHTML = localStorage.getItem("input");
+    // document.getElementById("result").innerHTML = localStorage.getItem("input");
 </script>
 </body>
 </html>

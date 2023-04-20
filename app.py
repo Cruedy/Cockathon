@@ -25,12 +25,12 @@ descriptionsL = [0]
 def show_drinks():
   print("data:", dataL[0])
   print("drinks:", drinksL[0])
-  return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0],cache_timeout=0)
+  return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
 
 @app.route('/retrieve_drinks', methods=['POST'])
 def retrieve_drinks():
     data = request.get_json()
-    dataL[0] = data
+    dataL[0] = ", ".join(data)
     # print("Data:", data)
     drink = drinks_to_ingredients.getDrinks(data)[0]
     drinksL[0] = drink
