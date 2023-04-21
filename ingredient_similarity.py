@@ -3,7 +3,7 @@
 # pip install transformers
 # pip install sentence-transformers
 
-from sentencetransformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer, util
 import random
 # import numpy as np
 
