@@ -22,25 +22,26 @@
         /* CSS styles for the video element */
         #loader-video {
             /* Set video to a smaller width and height */
-            width: 240px;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
     <div class="loader-container">
         <!-- Video element with muted attribute and autoplay without loop attribute -->
-        <video id="loader-video" src="helper/load.mp4" muted autoplay></video>
+        <video id="loader-video" src="helper/loader.mp4" muted autoplay></video>
     </div>
 
     <script>
-        // Add JavaScript code to initiate the transition to the next page
-        window.onload = function() {
-            // Simulate a delay for demonstration purposes
-            setTimeout(function() {
-                // Navigate to the next page
-                window.location.href = "drink.html";
-            }, 20000); // 2 seconds
-        };
+        // // Add JavaScript code to initiate the transition to the next page
+        // window.onload = function() {
+        //     // Simulate a delay for demonstration purposes
+        //     setTimeout(function() {
+        //         // Navigate to the next page
+        //         window.location.href = "drink.html";
+        //     }, 20000); // 2 seconds
+        // };
         // Get the video element
         var video = document.getElementById("loader-video");
 
@@ -50,10 +51,27 @@
             video.currentTime = 0;
             video.play();
         });
-    </script>
-      <script>
+        // Show the loader
+        document.getElementById('loader-video').style.display = 'block';
 
-      </script>
+        // Start your time-consuming operation here
+        function callPythonFunction(){
+            var arg1 = 10;
+            var arg2 = 20;
+
+            // Make an AJAX request to the server-side API
+            function callPythonFunction(){
+
+                // Make an AJAX request to the server-side API
+                $.post('/show_drinks', function(response) {
+                    // Handle the response from the server
+                    var result = response.result;
+                    console.log('Result:', result);
+                });
+            }
+        // Hide the loader when the operation completes
+        document.getElementById('loader-video').style.display = 'none';
+    </script>
 </body>
 </html>
 
