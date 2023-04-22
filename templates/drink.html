@@ -41,7 +41,21 @@
     {{data}}
 </p>
 <script>
-    // document.getElementById("result").innerHTML = localStorage.getItem("input");
+    // Retrieve data from localStorage
+    const selected = localStorage.getItem('input');
+
+    // Check if data exists in localStorage
+    if (selected !== null) {
+        // Parse the retrieved data
+        const parsedData = JSON.parse(selected);
+        // Update the DOM with the retrieved data
+        const dataContainer = document.getElementById('dataContainer');
+        dataContainer.textContent = `Parsed Data: ${JSON.stringify(parsedData)}`;
+    } else {
+        // Handle case when data does not exist in localStorage
+        console.log('No data found in localStorage.');
+    }
+
 </script>
 </body>
 </html>
