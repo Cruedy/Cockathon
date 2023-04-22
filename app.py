@@ -29,11 +29,13 @@ def show_drinks():
     # dataL[0] = ", ".join(data)
     # print("Data:", data)
 
-    # adjectives = request.json['data']
     print(f"adjectives are {adjectives}")
-    
+
+
+    print(getDrinks(adjectives))
+    print(createName(getDrinks(adjectives)))
     drinksL[0] = createName(getDrinks(adjectives))
-    print(drinksL[0])
+    # print(drinksL[0])
     # ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
     # ingredients = ", ".join(ingredientsList)
     # descriptionsL[0] = ingredients

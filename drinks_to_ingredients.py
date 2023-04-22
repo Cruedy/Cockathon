@@ -51,11 +51,12 @@ def handle_loop(adj, alc, max, name, drinks):
 # inputs a list of drink names
 # outputs a super cool name of a drink
 def createName(drinks):
-    # adj = []
-    # alc = []
-    # print(drinks)
-    # name = handle_loop(adj, alc, 0, "", drinks)
-    # while name in drinks[0]:
-    #     name = handle_loop(adj, alc, 0, "", drinks)
-    # return name
-    return "Mojito sunrise"
+    adj = []
+    alc = []
+    print(drinks)
+    name = handle_loop(adj, alc, 0, "", drinks)
+    while name in drinks[0]:
+        name = handle_loop(adj, alc, 0, "", drinks)
+    return name
+
+createName([])
