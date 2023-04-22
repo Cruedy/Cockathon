@@ -54,21 +54,28 @@ def create_ingredients(name, ingredients, adjectives):
                 name_max_similarity = name_cosine_scores
         
     print(f"alcohol_ingredients are {alcohol_ingredients}")
-    print(f"adjective_ingredients are {adjective_ingredients[-3:]} with adjectives {adjectives}")
-    print(f"name_ingredients are {name_ingredients[-3:]} with name {name}")
+    print(f"adjective_ingredients are {adjective_ingredients} with adjectives {adjectives}")
+    print(f"name_ingredients are {name_ingredients} with name {name}")
 
     num_alcohol = random.randint(1,2)
     num_adj = random.randint(2, 3)
     num_name = random.randint(1, 2)
 
+    # ensuring that we do not sample a size larger than the length of every ingredient
+    if len(alcohol_ingredients) < num_alcohol:
+        num_alcohol = len(alcohol_ingredients)
     if len(adjective_ingredients) > 3:
         adjective_ingredients = adjective_ingredients[-3:]
+    elif len(adjective_ingredients) < num_adj:
+        num_adj = len(adjective_ingredients)
     if len(name_ingredients) > 3:
         name_ingredients = name_ingredients[-3:]
+    elif len(name_ingredients) < num_name:
+        num_name = len(name_ingredients)
 
     random_alcohol = random.sample(alcohol_ingredients, k=num_alcohol)
-    random_adj = random.sample(adjective_ingredients[-3:], k=num_adj)
-    random_name = random.sample(name_ingredients[-3:], k=num_name)
+    random_adj = random.sample(adjective_ingredients, k=num_adj)
+    random_name = random.sample(name_ingredients, k=num_name)
 
     return random_alcohol + random_adj + random_name
 
@@ -79,5 +86,3 @@ ingredients = getIngredients(drinks)
 print(ingredients)
 print(name)
 print(create_ingredients(name, ingredients, adjectives))
-
-# just mild doesn't work lol

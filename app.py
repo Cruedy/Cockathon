@@ -31,7 +31,7 @@ def show_drinks():
 
     print(f"adjectives are {adjectives}")
     drinksL[0] = createName(getDrinks(adjectives))
-    ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
+    ingredientsList = create_ingredients(createName(getDrinks(adjectives)), getIngredients(getDrinks(adjectives)), adjectives)
     print(ingredientsList)
     ingredients = ", ".join(ingredientsList)
     descriptionsL[0] = ingredients
