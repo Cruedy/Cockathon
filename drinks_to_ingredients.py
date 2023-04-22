@@ -33,6 +33,8 @@ def getIngredients(drinks):
 
 # helper for createName
 def handle_loop(adj, alc, max, name, drinks):
+    if len(drinks) == 1:
+        name = drinks[0]
     for d in drinks:
         terms = d.split()
         if len(terms) > max:
@@ -55,7 +57,7 @@ def createName(drinks):
     alc = []
     print(drinks)
     name = handle_loop(adj, alc, 0, "", drinks)
-    while name in drinks[0]:
+    while name in drinks:
         name = handle_loop(adj, alc, 0, "", drinks)
     return name
 
