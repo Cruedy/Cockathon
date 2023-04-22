@@ -28,32 +28,58 @@
     {{description}}
 </p>
 
-<form action="/" method="get">
-    <a href = "website.html"> 
-        <button type="submit" id="enter">
-            make new drink
-        </button>
-    </a>    
-</form>
+<form action="/new_drinks" method="get">
+
+    <button type="submit" id="enter" onClick="reset(this)">
+    </form>  
+        make new drink
+    </button>
+
+
 
 <p class="title-text"> Drink types:</p>
 <p style="color:#6E7889" id="result">
     {{data}}
 </p>
-<script>
-    // Retrieve data from localStorage
-    const selected = localStorage.getItem('input');
+<script> 
+    // Make an HTTP request to Flask when the page loads
+    window.onload = function() {
+    // You can use any JavaScript HTTP library, such as Fetch or Axios, to make the request
+    // Here's an example using Fetch
+    fetch('/retrieve_drinks', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        // You can pass any data as needed in the request body
+        body: JSON.stringify({data: 'Hello Flask!'})
+    })
+    .then(response => {
+        console.log('Flask route called successfully:', response);
+        // Process the response as needed
+    })
+    .catch(error => {
+        console.error('Error calling Flask route:', error);
+    });
+    };
 
-    // Check if data exists in localStorage
-    if (selected !== null) {
-        // Parse the retrieved data
-        const parsedData = JSON.parse(selected);
-        // Update the DOM with the retrieved data
-        const dataContainer = document.getElementById('dataContainer');
-        dataContainer.textContent = `Parsed Data: ${JSON.stringify(parsedData)}`;
-    } else {
-        // Handle case when data does not exist in localStorage
-        console.log('No data found in localStorage.');
+    // const jsonArray = JSON.stringify(selected);
+    //     $.ajax({
+    //     url: "/retrieve_drinks",
+    //     type: "POST",
+    //     data: jsonArray,
+    //     contentType: "application/json",
+    //     success: function (response) {
+    //         console.log("sent");
+    //     },
+    //     error: function (error) {
+    //                     // console.error(error);
+    //         },
+    //     });
+    
+    function reset(x) {
+        localStorage.removeItem("input");
+        
     }
 
 </script>

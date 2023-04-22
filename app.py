@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import csv
-import drinks_to_ingredients
+from drinks_to_ingredients import getDrinks, getIngredients, createName
+from ingredient_similarity import create_ingredients
 
 app = Flask("Cockathon")
+adjectives = [] # whatever u get from the local storage think mehek
 dataL = [0]
 drinksL = [0]
 descriptionsL = [0]
@@ -23,22 +25,47 @@ descriptionsL = [0]
 
 @app.route('/show_drinks', methods=['GET'])
 def show_drinks():
-  print("data:", dataL[0])
-  print("drinks:", drinksL[0])
-  return render_template("loader.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
+    # adjectives = ["fruity", "bubbly"]
+    print(f"adjectives are {adjectives}")
+    data = request.get_json()
+    dataL[0] = ", ".join(data)
+    print("Data:", data)
+    drinksL[0] = createName(getDrinks(adjectives))
+    ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
+    # drink = getDrinks(data)[0]
+    # drinksL[0] = drink
+    # ingredientsList = getIngredients(drink)
+    ingredients = ", ".join(ingredientsList)
+    descriptionsL[0] = ingredients
+    # data = request.get_json()
+    # dataL[0] = ", ".join(data)
+    # print("Data:", data)
+    # drinksL[0] = createName(getDrinks(adjectives))
+    # ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
+    print("data:", dataL[0])
+    print("drinks:", drinksL[0])
+    
+    return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
+
+@app.route('/new_drinks', methods=['GET'])
+def new_drinks():
+  return render_template("website.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
+
+@app.route('/send_array', methods=['POST'])
+def send_array():
+    ids = request.json['data']
+    # Process the array data here
+    print(ids)
+    adjectives = ids
+    # return {'status': 'success'}
+    return adjectives
+
 
 @app.route('/retrieve_drinks', methods=['POST'])
 def retrieve_drinks():
-    data = request.get_json()
-    dataL[0] = ", ".join(data)
-    # print("Data:", data)
-    drink = drinks_to_ingredients.getDrinks(data)[0]
-    drinksL[0] = drink
-    ingredientsList = drinks_to_ingredients.getIngredients(drink)
-    ingredients = ", ".join(ingredientsList)
-    descriptionsL[0] = ingredients
-    # print(drinks)
-    # print("test")
+    
+    print(f"drinksL[0] is {drinksL[0]}")
+    print("test")
     # print()
     return render_template("drink.html", cache_timeout=0) # redirect(url_for('show_drinks'))
 
