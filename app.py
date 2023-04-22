@@ -30,15 +30,11 @@ def show_drinks():
     # print("Data:", data)
 
     print(f"adjectives are {adjectives}")
-
-
-    print(getDrinks(adjectives))
-    print(createName(getDrinks(adjectives)))
     drinksL[0] = createName(getDrinks(adjectives))
-    # print(drinksL[0])
-    # ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
-    # ingredients = ", ".join(ingredientsList)
-    # descriptionsL[0] = ingredients
+    ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
+    print(ingredientsList)
+    ingredients = ", ".join(ingredientsList)
+    descriptionsL[0] = ingredients
     # print("data:", dataL[0])
     # print("drinks:", drinksL[0])
     return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
