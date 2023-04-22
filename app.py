@@ -53,9 +53,6 @@ def send_array():
 def new_drinks():
   return render_template("website.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
 
-
-
-
 @app.route('/retrieve_drinks', methods=['POST'])
 def retrieve_drinks():
     print(f"drinksL[0] is {drinksL[0]}")
