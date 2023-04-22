@@ -53,22 +53,15 @@
         });
         // Show the loader
         document.getElementById('loader-video').style.display = 'block';
-
-        // Start your time-consuming operation here
+        // Make an AJAX request to the server-side API
         function callPythonFunction(){
-            var arg1 = 10;
-            var arg2 = 20;
-
             // Make an AJAX request to the server-side API
-            function callPythonFunction(){
-
-                // Make an AJAX request to the server-side API
-                $.post('/show_drinks', function(response) {
-                    // Handle the response from the server
-                    var result = response.result;
-                    console.log('Result:', result);
-                });
-            }
+            $.post('/show_drinks', function(response) {
+                // Handle the response from the server
+                var result = response.result;
+                console.log('Result:', result);
+            });
+        }
         // Hide the loader when the operation completes
         document.getElementById('loader-video').style.display = 'none';
     </script>
