@@ -25,45 +25,41 @@ descriptionsL = [0]
 
 @app.route('/show_drinks', methods=['GET'])
 def show_drinks():
-    # adjectives = ["fruity", "bubbly"]
-    print(f"adjectives are {adjectives}")
-    data = request.get_json()
-    dataL[0] = ", ".join(data)
-    print("Data:", data)
-    drinksL[0] = createName(getDrinks(adjectives))
-    ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
-    # drink = getDrinks(data)[0]
-    # drinksL[0] = drink
-    # ingredientsList = getIngredients(drink)
-    ingredients = ", ".join(ingredientsList)
-    descriptionsL[0] = ingredients
     # data = request.get_json()
     # dataL[0] = ", ".join(data)
     # print("Data:", data)
-    # drinksL[0] = createName(getDrinks(adjectives))
-    # ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
-    print("data:", dataL[0])
-    print("drinks:", drinksL[0])
-    
-    return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
 
-@app.route('/new_drinks', methods=['GET'])
-def new_drinks():
-  return render_template("website.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
+    # adjectives = request.json['data']
+    print(f"adjectives are {adjectives}")
+    
+    drinksL[0] = createName(getDrinks(adjectives))
+    print(drinksL[0])
+    # ingredientsList = create_ingredients(createName, getIngredients(getDrinks(adjectives)), adjectives)
+    # ingredients = ", ".join(ingredientsList)
+    # descriptionsL[0] = ingredients
+    # print("data:", dataL[0])
+    # print("drinks:", drinksL[0])
+    return render_template("drink.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
 
 @app.route('/send_array', methods=['POST'])
 def send_array():
     ids = request.json['data']
     # Process the array data here
-    print(ids)
+    global adjectives
     adjectives = ids
+    # print(f"adjectives are {ids}")
     # return {'status': 'success'}
-    return adjectives
+    return render_template("drink.html", drinks = drinksL[0], description = adjectives, data=dataL[0], cache_timeout=0)
+
+@app.route('/new_drinks', methods=['GET'])
+def new_drinks():
+  return render_template("website.html", drinks = drinksL[0], description = descriptionsL[0], data=dataL[0], cache_timeout=0)
+
+
 
 
 @app.route('/retrieve_drinks', methods=['POST'])
 def retrieve_drinks():
-    
     print(f"drinksL[0] is {drinksL[0]}")
     print("test")
     # print()
