@@ -17,16 +17,18 @@
         </title>
     </head>
 <body>
-<h1>
-    Your drink name:
-</h1>
 <h1 >
     {{drinks}}
 </h1>
-<p class="title-text"> Description:</p>
 <p style="color:#6E7889">
     {{description}}
 </p>
+
+<video width="320" height = "240" autoplay loop playsinline>
+    <source src = "helper/load.mp4" type = "video/mp4">
+    <source src = "helper/load.mp4" type = "video/webm">
+    <source src = "helper/load.mp4" type = "video/ogg">
+</video>
 
 <form action="/new_drinks" method="get">
 
@@ -36,11 +38,6 @@
     </button>
 
 
-
-<p class="title-text"> Drink types:</p>
-<p style="color:#6E7889" id="result">
-    {{data}}
-</p>
 <script> 
     // Make an HTTP request to Flask when the page loads
     window.onload = function() {
