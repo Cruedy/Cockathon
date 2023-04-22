@@ -61,4 +61,4 @@ def createName(drinks):
         name = handle_loop(adj, alc, 0, "", drinks)
     return name
 
-createName([])
+# createName([])
